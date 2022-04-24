@@ -49,7 +49,6 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="/user/dhcheong//proxy/absolute/8000/index.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Fine-tuning reproduciblity of LIGO Black Hole signal tutorial, Part II" href="README.html" />
@@ -643,6 +642,19 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Standard python numerical analysis imports:</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">signal</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp1d</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="read-the-event-properties-from-a-local-json-file-download-in-advance">
 <h3>Read the event properties from a local json file (download in advance):<a class="headerlink" href="#read-the-event-properties-from-a-local-json-file-download-in-advance" title="Permalink to this headline">¶</a></h3>
@@ -757,15 +769,11 @@ Quitting.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># both H1 and L1 will have the same time vector, so:</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">time</span> <span class="o">=</span> <span class="n">time_H1</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># the time sample interval (uniformly sampled!)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">time</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;time_H1&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;time_H1: len, min, mean, max = &#39;, 131072, 1126259446.0, 1126259461.999878, 1126259477.9997559)
+(&#39;strain_H1: len, min, mean, max = &#39;, 131072, -7.044665943156067e-19, 5.895522509246437e-23, 7.706262192397465e-19)
+(&#39;strain_L1: len, min, mean, max = &#39;, 131072, -1.8697138664279764e-18, -1.0522332249909908e-18, -4.60035111311666e-20)
+For H1, 32 out of 32 seconds contain usable DATA
+For L1, 32 out of 32 seconds contain usable DATA
 </pre></div>
 </div>
 </div>
