@@ -1,4 +1,4 @@
-import ligotools.readligo as rl
+from ligotools import loaddata, dq_channel_to_seglist, read_hdf5
 import numpy as np
 
 def test_loaddata():
