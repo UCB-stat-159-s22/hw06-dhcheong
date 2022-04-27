@@ -8,17 +8,21 @@ conf.py: _config.yml _toc.yml
 
 html-hub: conf.py
 	sphinx-build  . _build/html -D html_baseurl=${JUPYTERHUB_SERVICE_PREFIX}/proxy/absolute/8000
+	cd _build/html
+	python -m http.server
 	@echo "Start the Python http server and visit:"
 	@echo "https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html"
 
 # clean up the figures, audio and _build folders.
+
 .PHONY: clean
 clean:
 	rm -rf figures/* audio/* _build/*
 
 # Environment 
+
 .PHONY : env
 env :
-	mamba env create -f environment.yml --name ligo
+	mamba env create -f environment.yml 
 	conda activate ligo
 	python -m ipykernel install --user --name ligo --display-name "LIGO Kernel"
